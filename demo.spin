@@ -15,10 +15,9 @@ PUB go
 
   pst.Start(115200)                  
   pst.clear
-                                                          
-  clpr.start
-    
-  repeat
+  clpr.start(14, 15)      
+      
+ repeat
       
     pst.dec(clpr.reading)
     
@@ -26,6 +25,6 @@ PUB go
       pst.str(string(" in"))
     else
       pst.str(string(" mm"))
-      
+                                
     pst.newline
                 
