@@ -15,7 +15,8 @@ PUB go
 
   pst.Start(115200)                  
   pst.clear
-  clpr.start(14, 15)      
+  clpr.start(14, 15)
+  waitcnt(cnt + clkfreq/5)      
       
  repeat
       
@@ -25,6 +26,7 @@ PUB go
       pst.str(string(" in"))
     else
       pst.str(string(" mm"))
-                                
-    pst.newline
+                                             
+    pst.newline   
+    'waitcnt(cnt+clkfreq/20)   
                 
